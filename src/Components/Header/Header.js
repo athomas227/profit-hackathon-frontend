@@ -14,6 +14,7 @@ export default function Header() {
                     <Nav.Link href="/signup">Sign Up</Nav.Link>
                     <Nav.Link href="/signin">Login</Nav.Link>
                     <Nav.Link href="#pricing">Locator</Nav.Link>
+                    <Nav.Link href="/profile">Profile</Nav.Link>
                 </Nav>
                 </Container>
             </Navbar>
