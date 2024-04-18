@@ -29,14 +29,6 @@ export default function Header() {
                 boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)'
               }}>
                 <Container>
-                <Navbar.Brand href="#home">SwiftSwirl</Navbar.Brand>
-                <Nav className="me-auto">
-                    <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="/signup">Sign Up</Nav.Link>
-                    <Nav.Link href="/signin">Login</Nav.Link>
-                    <Nav.Link href="#pricing">Locator</Nav.Link>
-                    <Nav.Link href="/profile">Profile</Nav.Link>
-                </Nav>
                     <Navbar.Brand href="/">SwiftSwirl</Navbar.Brand>
                     <Nav className="me-auto">
                         <Nav.Link href="/">Home</Nav.Link>

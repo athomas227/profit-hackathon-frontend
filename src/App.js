@@ -3,22 +3,13 @@ import Home from "./Components/Home/Home";
 import Header from "./Components/Header/Header";
 import SignIn from "./Components/SignIn/SignIn";
 import SignUp from "./Components/SignUp/SignUp";
-import Profile from "./Components/Profile/Profile";
 import Menu from "./Components/Menu/Menu";
 import { AuthProvider } from "./Components/Context/AuthContext";
-
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/profile" element={<Profile />} />
-        </Routes>
         <AuthProvider>
           <Header />
           <Routes>
