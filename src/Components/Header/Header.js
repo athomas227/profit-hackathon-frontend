@@ -6,12 +6,16 @@ import Button from 'react-bootstrap/Button';
 import { useAuth } from "../Context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
+// define the Header functional component
 export default function Header() {
+    // get the currentUser and logout function from the useAuth hook
     const { currentUser, logout } = useAuth();
     const navigate = useNavigate();
 
+    // handle sign out
     const handleSignOut = async () => {
         try {
+        // call the logout function
         await logout();
         navigate("/");
         } catch (error) {
@@ -19,6 +23,7 @@ export default function Header() {
         }
     };
 
+    // render the component
     return (
         <div>
             <Navbar  data-bs-theme="dark"
