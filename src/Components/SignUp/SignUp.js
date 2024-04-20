@@ -7,21 +7,26 @@ import Button from 'react-bootstrap/Button';
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
 
+// define the SignUp functional component
 export default function SignUp() {
+    // use state hooks to manage email and password input values
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [fullName, setFullName] = useState("");
     const [phone, setPhone] = useState("");
-
     const navigate = useNavigate();
+
+    // get the signup function from the AuthContext
     const { signup } = useContext(AuthContext);
 
+    // handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
         signup(email, password);
         navigate("/");
     };
     
+    // render the component
     return (
             <Container>
               <Row className="justify-content-center">
