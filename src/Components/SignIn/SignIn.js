@@ -7,16 +7,23 @@ import Button from 'react-bootstrap/Button';
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
 
+// define the SignIn functional component
 export default function SignIn() {
+    // use state hooks to manage email and password input values
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    // get the navigate function to navigate between routes
     const navigate = useNavigate();
 
+    // get the login function from the AuthContext
     const { login } = useContext(AuthContext);
 
+    // handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
+          // call the login function
           await login(email, password);
           navigate("/");
         } catch (error) {
@@ -24,6 +31,7 @@ export default function SignIn() {
         }
       };
 
+    // render the component
     return (
         <Container>
             <Row className="justify-content-center">
